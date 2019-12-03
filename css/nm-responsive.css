@@ -1,0 +1,80 @@
+body {
+        background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+}
+
+p {
+    color: black;
+}
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 780px) {
+	.nm-banner{
+	  height: 86vh;
+	}
+	.header-logo {
+		margin: 3%;
+		width: 25%;
+	}
+	.nm-events-count h1 {
+		font-size: 2rem;
+	}
+	
+	.nm-nav-item li a:hover{
+		transform: none;
+	}
+	.nm-about-vid iframe {
+		height: 350px;
+		width: 90%;
+	}
+	.nm-about-details {
+		margin-top: 5%;
+	}
+	.nm-accordion {
+		padding: 0px;
+	}
+	.nm-mailchimp {
+		width: 100%;
+	}
+	footer .nm-nav-item {
+		width: 100%;
+		margin: 0px auto;
+		margin-top: 5%;
+		text-align: center;
+		position: relative;
+		display: block;
+	}
+	footer .nm-nav-item li {
+		padding: 0px;
+		margin: 0px 10px;
+		display: inline-block;
+	}
+	.nm-copy-text {
+		margin-top: 1%;
+	}
+	footer .nm-header-icon {
+		margin: 20px auto;
+	}
+	.nm-back-2-top {
+		margin-top: 5%;
+	}
+		
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+.paralasic {
+  background:
+  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)),
+  url(bg.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100vw;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-color: #000000;
+}
