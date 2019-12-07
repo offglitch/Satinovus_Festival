@@ -107,3 +107,72 @@ jQuery(window).on('scroll', function () {
   });
 
 });
+
+
+
+// First, we need to get reference to canvas element
+var fullScreenCanvas = document.getElementById('canvas');
+
+// Take a look at all possible options. You can change what you want right here, but we will skip it for now.
+var DEFAULTS = {
+
+	// dom canvas
+	canvas: null,
+
+	// settings
+	particleCount: 100,
+	flareCount: 100,
+	motion: 0.05,
+	particleColor: '#FDE8E1',
+	flareColor: '#757575',
+	linkColor: 'white',
+	particleSizeBase: 1,
+	particleSizeMultiplier: 0.5,
+	flareSizeBase: 100,
+	flareSizeMultiplier: 100,
+	lineWidth: 2,
+	linkChance: 100,         // chance per frame of link, higher: smaller chance
+	linkLengthMin: 3,        // min linked vertices
+	linkLengthMax: 5,        // max linked vertices
+	linkOpacity: 0.3,        // number between 0 & 1
+	linkFade: 28,            // link fade-out frames
+	linkSpeed: 4,            // distance a link travels in 1 frame
+	renderParticles: true,
+	renderFlares: true,
+	renderLinks: false,
+	flicker: true,
+	flickerSmoothing: 12,    // higher: smoother flicker
+	randomMotion: true,
+	noiseLength: 1000,
+	noiseStrength: 4,
+	pointsMultiplier: 1000   // multiplier for delaunay points, since floats too small can mess up the algorithm
+};
+
+// These MUST BE configured
+DEFAULTS.canvas = fullScreenCanvas;
+
+// This is optional, in case we want to see links in between
+DEFAULTS.renderLinks = true;
+
+// And to change big particles color
+DEFAULTS.flareColor = 'white';
+
+// We can pack our custom config into separate object. This is minimal implementation.
+var config = {
+	canvas: canvas
+};
+
+// And it will overwrite defaults. Note, DrifterStars2.init(DEFAULTS); will work as well
+DrifterStars2.init(config);
+
+// And there is special endpoint for two particular mutations
+DrifterStars2.setEnableLinks(false);
+DrifterStars2.setFlareColor('#ffffff26');
+
+var offset = 80;
+
+    $('.navbar li a').click(function(event) {
+        event.preventDefault();
+        $($(this).attr('href'))[0].scrollIntoView();
+        scrollBy(0, -offset);
+    });

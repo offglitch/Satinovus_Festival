@@ -1,21 +1,28 @@
-body {
-        background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
-}
-
-p {
-    color: black;
-}
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {}
 
 /* Medium devices (tablets, 768px and up) */
 @media (max-width: 780px) {
 	.nm-banner{
-	  height: 86vh;
+	  height: 84vh;
 	}
 	.header-logo {
 		margin: 3%;
-		width: 25%;
+		width: 20%;
+		left: 36%;
+	}
+	.nm-logo {
+		margin-left: 20px;
+	}
+	.nm-logo-display{
+		display: block;
+	}
+	.nm-nav-brand{
+		display: none;
+	}
+	.navbar-toggler{
+		position: relative;
+		top: 10px;
 	}
 	.nm-events-count h1 {
 		font-size: 2rem;
@@ -30,6 +37,23 @@ p {
 	}
 	.nm-about-details {
 		margin-top: 5%;
+	}
+	.nm-events-block {
+		padding-bottom: 24px;
+		height: 99%;
+		margin-bottom: 20px;
+	}
+	.hovereffect{
+		height: 30%;
+	}
+	.nm-tk-details {
+		padding: 10px 0px;
+	}
+	.nm-events-block .nm-btn{
+		padding: 0px;
+	}
+	.nm-h-35-m{
+		height: 35%;
 	}
 	.nm-accordion {
 		padding: 0px;
@@ -67,14 +91,21 @@ p {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}
-.paralasic {
-  background:
-  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.75)),
-  url(bg.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-  background-size: 100vw;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-color: #000000;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
